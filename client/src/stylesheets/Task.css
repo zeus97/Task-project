@@ -1,0 +1,35 @@
+.task-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    color: #fff;
+    border-bottom: 1px solid #ffff;
+}
+.task-box:hover{
+    background-color:#476D7C ;
+}
+.bt-box{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    
+}
+.task-box p{
+    padding: 2px;
+    font-size: 20px;
+    width: 250px;
+    overflow-wrap: break-word;
+    
+    
+}
+.completed{
+    text-decoration: line-through;
+    color: #16a021;
+}
+.task-box i {
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 20px;
+    color: #ff6060;
+}
