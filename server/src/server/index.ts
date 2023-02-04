@@ -46,9 +46,9 @@ if(url){
 }
 
 
-// * Security Config
-server.use(helmet());
-server.use(cors());
+
+
+
 
 // * Content Type Config
 server.use(express.urlencoded({ extended: true, limit: '50mb' }));
@@ -65,5 +65,10 @@ server.get('/', (req: Request, res: Response) => {
 server.get('/api', (req: Request, res: Response) => {
     res.redirect('/api/v1');
 });
+
+
+// * Security Config
+server.use(helmet());
+server.use(cors());
 
 export default server;

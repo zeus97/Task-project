@@ -25,9 +25,7 @@ export class AuthController implements IAuthController{
         
         if(user){
             LogSuccess(`[/api/v1/auth/register] Register New User: ${user.email} `);
-            await registerUser(user).then((r) => {
-                response= r;
-            });
+            response = await registerUser(user)
         } else {
             LogWarning('[/api/auth/register] Register needs User Entity')
             

@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { Register, Auth, ITask } from '../interfaces';
 
-const baseURL = 'https://task-app-6g6c.onrender.com/api/v1';
+const baseURL = '/api/v1';
 
 
 export const RegisterUser = async (user: Register)=>{
-   return axios.post(baseURL + '/auth/register', user)
+   return axios.post(baseURL + '/auth/register',user)
 
 };
 

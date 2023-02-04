@@ -1,5 +1,5 @@
-import dotenv from 'dotenv';
 import server from './src/server';
+import dotenv from 'dotenv';
 import { LogError, LogSuccess } from './src/Utils/logger';
 
 
@@ -7,6 +7,7 @@ import { LogError, LogSuccess } from './src/Utils/logger';
 dotenv.config();
 
 const port = process.env.PORT || 8000;
+
 
 // * Execute SERVER
 server.listen(port, () => {
