@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Register, Auth, ITask } from '../interfaces';
 
-const baseURL = 'https://task-app-v1.onrender.com//api/v1';
+const baseURL = 'https://task-app-v1.onrender.com/api/v1';
 
 
 export const RegisterUser = async (user: Register)=>{
