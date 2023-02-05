@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Register, Auth, ITask } from '../interfaces';
 
-const baseURL = 'http://localhost:8000/api/v1';
+const baseURL = '/api/v1';
 
 
 export const RegisterUser = async (user: Register)=>{

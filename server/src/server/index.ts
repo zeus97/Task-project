@@ -11,7 +11,7 @@ import dotenv from 'dotenv';
 
 //Swagger
 import swaggerUI from 'swagger-ui-express';
-import * as swaggerJSDoc from '../../public/swagger.json';
+import * as swaggerJSDoc from '../../swagger.json';
 
 // * Create Express APP
 const server = express();
