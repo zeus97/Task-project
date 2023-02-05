@@ -16,8 +16,9 @@
 }
 
 .home-page nav {
+    padding-left: 30%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 .home-page-title{
     font-size: 4rem;

@@ -38,6 +38,7 @@ function HomePage() {
       <header>
         <nav>
           <p onClick={handleShow}>Log in</p>
+          <p onClick={()=>{navigate('/free')}}>Try it free</p>
         </nav>
       </header>
       <h1 className='home-page-title'>Task Manager</h1>
