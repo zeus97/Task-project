@@ -30,7 +30,7 @@ server.use('/api/v1',rootRouter);
 
 
 // Static server
-server.use(express.static('dist'));
+server.use(express.static('public'));
 
 // * Swagger config
 server.use('/docs',swaggerUI.serve,swaggerUI.setup(swaggerJSDoc))
