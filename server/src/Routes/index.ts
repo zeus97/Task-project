@@ -11,11 +11,10 @@ import meRouter from './MeRouter';
 // Server instance
 let server = express();
 
+
 // Router instance
-let rootRouter = express.Router();
+ const rootRouter = express.Router();
 
-
-// Activate for requests to http://localhost:8000/api
 
 // GET: http://localhost:8000/api/
 rootRouter.get('/', (req: Request, res: Response) => {

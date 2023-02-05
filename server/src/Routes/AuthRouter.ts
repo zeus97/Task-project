@@ -2,6 +2,7 @@ import express, { Request, Response } from "express";
 import { AuthController } from "../Controllers/AuthController";
 import { Auth } from "../Domain/Interfaces/Auth.interface";
 import { User } from "../Domain/Interfaces/User.interface";
+import cors from 'cors';
 
 
 

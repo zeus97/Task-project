@@ -1,11 +1,8 @@
-import express, { Express, Request, Response } from "express";
+import express, { Request, Response } from "express";
 
-// Security
-import cors from 'cors';
-import helmet from 'helmet';
+//Root Router
+import rootRouter from '../Routes/index';
 
-// Root Router
-import rootRouter from '../Routes';
 
 //Mongo DB
 import mongoose from "mongoose";
@@ -17,16 +14,19 @@ import swaggerUI from 'swagger-ui-express';
 import * as swaggerJSDoc from '../../public/swagger.json';
 
 // * Create Express APP
-const server: Express = express();
+const server = express();
 
-
+//CORS Enabled
+server.use((req,res,next)=>{
+    res.header("Access-Control-Allow-Origin","*");
+    res.header("Access-Control-Allow-Methods","GET,POST,PUT,DELETE,OPTIONS");
+    res.header("Access-Control-Allow-Headers","Origin,X-Requested-With,Content-Type,Accept, Authorization,x-access-token");
+    next();
+})
 
 // * Define SERVER to use "/api/v1" and use rootRouter from 'index.ts' in routes
 // From this point onover: http://localhost:8000/api/v1...
-server.use(
-    '/api/v1',
-    rootRouter
-    );
+server.use('/api/v1',rootRouter);
 
 
 // Static server
@@ -44,8 +44,6 @@ if(url){
     .then(()=> console.log('MongoDB connected'))
     .catch((err)=>{console.log(err)})
 }
-
-
 
 
 
@@ -68,7 +66,6 @@ server.get('/api', (req: Request, res: Response) => {
 
 
 // * Security Config
-server.use(helmet());
-server.use(cors());
+
 
 export default server;

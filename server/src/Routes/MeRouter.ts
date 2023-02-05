@@ -9,6 +9,7 @@ import { verifyToken } from '../Middlewares/verifyToken.middleware';
 // Middleware to acces body of request
 import bodyParser from 'body-parser';
 
+
 const jsonParser = bodyParser.json();
 
 let meRouter = express.Router();
