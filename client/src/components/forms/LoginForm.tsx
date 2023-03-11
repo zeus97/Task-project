@@ -48,7 +48,10 @@ function LoginForm() {
                     setMessage(res.data.message);
                     setError(true);
                 }
-            }).catch((error)=>{console.log(`[LOGIN ERROR]: ${error}`)})
+            }).catch((error)=>{
+                setMessage('An error ocurred');
+                setError(true);
+                console.log(`[LOGIN ERROR]: ${error}`)})
             .finally(()=>{
                 actions.setSubmitting(false);
                 actions.resetForm({values:initialValues});
@@ -75,7 +78,7 @@ function LoginForm() {
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Button className='login-bt' variant="primary" type="submit">
-                                    Log in
+                                    Sign in
                                 </Button>
                             </Form>
                             {error && <div className='d-flex justify-content-center  mt-2  '> <i className="bi bi-x-circle"></i> <h2 className='error-msg mt-1'>{message} </h2> </div>}

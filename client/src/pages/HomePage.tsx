@@ -37,11 +37,11 @@ function HomePage() {
     <div className='home-page'>
       <header>
         <nav>
-          <p onClick={handleShow}>Log in</p>
+          <p onClick={handleShow}>Sign in</p>
           <p onClick={()=>{navigate('/free')}}>Try it free</p>
         </nav>
       </header>
-      <h1 className='home-page-title'>Task Manager</h1>
+      <h1 className='home-page-title'>Task App</h1>
       <RegisterForm/>
 
       {

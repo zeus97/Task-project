@@ -5,8 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background: rgb(2,0,36);
-    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(9,70,121,1) 53%, rgba(0,181,255,1) 100%);
+    
     
 }
 .home-page header{
@@ -16,7 +15,7 @@
 }
 
 .home-page nav {
-    padding-left: 30%;
+    padding-left: 34%;
     display: flex;
     justify-content: space-around;
 }

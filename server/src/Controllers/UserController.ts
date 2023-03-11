@@ -15,7 +15,7 @@ export class UserController implements IUserController{
      * @returns Returns Promise of User data
      */
     @Get('/')
-    public async userData(@Query() id: string): Promise<AuthResponse | undefined> {
+    public async userData(@Query() id: string) {
      
         let response = undefined;
         let userFound: User | undefined = undefined;
@@ -54,7 +54,7 @@ export class UserController implements IUserController{
      * @returns Promise of tasks saved
      */
     @Post('/tasks')
-    public async saveTasks(@Query() id: string,@Body() tasks: Task[]): Promise<UserResponse | undefined> {
+    public async saveTasks(@Query() id: string,@Body() tasks: Task[]) {
 
         let response= undefined;
 

@@ -59,7 +59,7 @@ function RegisterForm() {
                     return (
                         isSubmitting ? <div className="spinner-border loading-register" role="status"></div> :
                         <div className='register-form'>
-                            <h2 className='register-form-title'>Register</h2>
+                            <h2 className='register-form-title'>Sign up</h2>
                             <Form noValidate onSubmit={handleSubmit}>
                                 <Form.Group className="mb-3">
                                     <Form.Control size='lg' type="text" placeholder="Enter name" name='name' value={values.name} onChange={handleChange} isValid={touched.name && !errors.name} isInvalid={!!errors.name}/>
@@ -82,7 +82,7 @@ function RegisterForm() {
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Button className='register-bt' variant="primary" type="submit">
-                                    Register
+                                    Sign up
                                 </Button>
                             </Form>
                             {success && <div className='d-flex justify-content-center  mt-2 '><i className="bi bi-check-circle"></i> <h2 className='register-msg'>Registration success</h2> </div>}

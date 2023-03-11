@@ -3,7 +3,7 @@ import { User } from '../Domain/Interfaces/User.interface';
 import { loginUser, registerUser } from '../Domain/orm/Auth.orm';
 import { LogSuccess, LogWarning } from '../Utils/logger';
 import {IAuthController} from '../Controllers/Interfaces/index'
-import { AuthResponse } from './Types';
+
 import { Route, Post, Tags, Body, Response, SuccessResponse} from 'tsoa'
 
 
@@ -19,7 +19,7 @@ export class AuthController implements IAuthController{
     @SuccessResponse('200','User registered succeful')
     @Response('404','The email is already in use')
     @Post('/register')
-    public async registerUser(@Body() user: User): Promise<AuthResponse | undefined> {
+    public async registerUser(@Body() user: User) {
         
         let response;
         
@@ -45,7 +45,7 @@ export class AuthController implements IAuthController{
      * @returns {AuthResponse} Promise of AuthResponse with a JWT
      */
     @Post('/login')
-    public async loginUser( @Body() auth: Auth): Promise<AuthResponse | undefined> {
+    public async loginUser( @Body() auth: Auth) {
         let response;
         
         if(auth){

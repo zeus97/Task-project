@@ -6,7 +6,8 @@
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(#102d64,#15725b);
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(16,45,100,1) 47%, rgba(21,114,91,1) 100%);
 }
 
 :root{
