@@ -43,7 +43,7 @@ function LoginForm() {
                 if(res.data.status === 200){
                     sessionStorage.setItem('x-access-token',res.data.token);
                     sessionStorage.setItem('id',res.data.id);
-                    navigate('/me');
+                    navigate(`/me?id=${res.data.id}`);
                 } else if(res.data.status === 404){
                     setMessage(res.data.message);
                     setError(true);
@@ -54,7 +54,7 @@ function LoginForm() {
                 console.log(`[LOGIN ERROR]: ${error}`)})
             .finally(()=>{
                 actions.setSubmitting(false);
-                actions.resetForm({values:initialValues});
+                actions.resetForm();
             })
         }}>
 

@@ -1,7 +1,7 @@
 
 # Task app
 
-An app created with MERN stack.
+A task management app created with MERN stack.
 
 
 
@@ -25,7 +25,7 @@ To see the documentation of the API go to **/docs**
 ## Features
 
 - Live preview
-- Responsive
+- Responsive design
 
 
 ## Environment Variables
