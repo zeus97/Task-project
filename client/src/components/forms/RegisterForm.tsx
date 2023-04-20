@@ -31,7 +31,7 @@ function RegisterForm() {
   
 
   return (
-    <div>
+    <div className='register-form-box'>
         <Formik
         initialValues={initialValues}
         validationSchema={schema}

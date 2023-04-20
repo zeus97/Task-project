@@ -1,6 +1,7 @@
 .form-task{
     padding: 5px;
     margin-bottom: 10px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +9,7 @@
 }
 
 .form-task label {
-    font-size: 25px;
+    font-size: 1.6rem;
     margin-right: 10px;
     color: var(--color-blanco);
 }
@@ -34,4 +35,19 @@
 .error-msg {
     margin-left: 5px;
     font-size: 16px;
+}
+
+@media screen and (max-width:600px){
+    .form-task label{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:420px){
+    .form-task label, .form-task input, .btn-task{
+        margin-bottom: 10px;
+    }
+    .form-task{
+        flex-direction: column;
+    }
 }

@@ -16,3 +16,13 @@
 .save-bt{
     margin-bottom: 550px;
 }
+
+
+@media screen and (max-width:600px){
+    .task-container{
+        width: 90%;
+    }
+    .no-tasks{
+        font-size: 2rem;
+    }
+}
