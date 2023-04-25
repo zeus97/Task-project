@@ -66,5 +66,5 @@ https://task-app-v1.onrender.com/
 
 ## Authors
 
-- [@EnriqueGut09](https://github.com/zeus97)
+- [@Enrique Dev](https://github.com/zeus97)
 
